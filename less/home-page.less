@@ -1,24 +1,70 @@
 .home {
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed lightgray;
+
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }//Media Break
+  }// header
+
+  .header-info {
+    margin-top: 2%;
+    .border-dash();
+
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+    }// media break
+
+    p {
+      margin-bottom: 2%;
+    }// p
+  }// .header-info
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }// media break
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }// media break
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }// media break
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }// media break
       }
     }
   }
@@ -26,6 +72,13 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column-reverse;
+    }// media break
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +95,13 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      width: 100%;
+    }// media break
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +113,29 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }// media break
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
-}// home
+
+      @media @mobile {
+        width: 80%;
+      }// media break
+
+      .button1 {
+        .button(#2487ad, white,  center);
+
+        @media @mobile {
+          width: 100%;
+        }// media break
+
+      }
+    }// destination
+  }//.content-pick
+}

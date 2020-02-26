@@ -1,1 +1,21 @@
-// Navigation Styles here
+nav {
+    width: 50%;
+
+    @media @phone {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }// media break
+
+    a {
+      text-decoration: none;
+      margin-left: 10%;
+      font-size: 1.4rem;
+      color: black;
+
+      @media @phone {
+        margin-left: 0%;
+      }// media break
+
+    }// a
+  }// nav
